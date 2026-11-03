@@ -2,7 +2,7 @@
 
 **Future business coming soon.**
 
-**Website:** [www.doctorunknown.com](https://www.doctorunknown.com)
+**Website:** [doctorunknown.com](https://doctorunknown.com)
 **Contact (private relay):** unknown@doctorunknown.com
 
 ## Files
@@ -17,7 +17,7 @@
 
 ## Hosting
 
-The site is served by GitHub Pages from the `main` branch, root folder, with the custom domain `www.doctorunknown.com`. No build step is required.
+The site is served by GitHub Pages from the `main` branch, root folder, with the custom domain `doctorunknown.com`. No build step is required.
 
 ---
 
@@ -61,3 +61,10 @@ The following are not owned by the Owner and are used under their own terms:
 ### No warranty
 
 This website and repository are provided "as is," without warranties of any kind.
+
+
+## Maintenance
+
+Run `python3 scripts/check_site.py` before opening a pull request. GitHub Actions checks metadata, local links, sitemap, robots and the domain file. Main requires pull requests and passing Site checks; force pushes and deletion remain blocked. Review mobile and desktop layouts and the contact link before publishing.
+
+Registrar transfer lock, auto-renewal, DNSSEC, GitHub Pages ownership verification and actual mailbox delivery require separate verification.
