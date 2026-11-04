@@ -1,5 +1,16 @@
 # Doctor Unknown
 
+## What the owner needs to know
+
+The website runs on GitHub Pages. You do not need to run commands to keep it online.
+The preview and validation commands are for whoever makes website changes.
+
+- Keep the domain registration renewed and account recovery details current.
+- After changes, review the live site on a phone and computer and report broken links or missing inquiries promptly.
+- The contact link opens the visitor's email app. Test delivery to unknown@doctorunknown.com, including its private relay.
+
+Developer instructions: see [For developers](#for-developers) below.
+
 **Future business coming soon.**
 
 **Website:** [doctorunknown.com](https://doctorunknown.com)
@@ -63,7 +74,22 @@ The following are not owned by the Owner and are used under their own terms:
 This website and repository are provided "as is," without warranties of any kind.
 
 
-## Maintenance
+## For developers
+
+### Local preview
+
+Use Python 3.12 or newer for the documented commands. This static site has no package installation or build step.
+From the repository root, run:
+
+```sh
+python3 -m http.server 8000
+```
+
+Open http://localhost:8000/; stop the preview with Ctrl+C.
+An internet connection is needed for externally loaded fonts.
+
+### Validation and publishing
+
 
 Run `python3 scripts/check_site.py` before opening a pull request. GitHub Actions checks metadata, local links, sitemap, robots and the domain file. Main requires pull requests and passing Site checks; force pushes and deletion remain blocked. Review mobile and desktop layouts and the contact link before publishing.
 
