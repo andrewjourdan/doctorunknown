@@ -49,7 +49,7 @@ The domains **doctorunknown.com** and **www.doctorunknown.com** are registered t
 Except for the third-party material listed below, the following are the property of the Owner:
 
 - the name **Doctor Unknown**;
-- the Doctor Unknown logo, including the open hexagon "hex key" mark with its wooden bat and snake, and its placement beside the Doctor Unknown lettering;
+- the Doctor Unknown logo, including the open hexagon "hex key" mark with its Staff of Hermes, and its placement beside the Doctor Unknown lettering;
 - the unknown-molecule background artwork;
 - the website's design, layout, text, code, color scheme and organization.
 
