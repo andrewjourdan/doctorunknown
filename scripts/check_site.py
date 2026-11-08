@@ -1,4 +1,4 @@
-"""Validate metadata, local navigation, publishing files and countdown targets."""
+"""Validate metadata, local navigation, publishing files and the legal notice."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
@@ -24,7 +24,7 @@ paths=["index.html"]
 texts={p:(ROOT/p).read_text() for p in paths}
 pages={p:Page(t) for p,t in texts.items()}
 for path, page in pages.items():
-    expected="https://doctorunknown.com/"+("patronage/" if path.startswith("patronage") else "")
+    expected="https://doctorunknown.com/"
     assert page.title and page.meta.get("description"), path+": missing metadata"
     assert page.canonical==[expected], path+": incorrect canonical"
     assert page.meta.get("og:url")==expected and page.meta.get("og:title") and page.meta.get("twitter:card"), path+": missing share metadata"
@@ -43,4 +43,5 @@ assert (ROOT/"CNAME").read_text().strip()=="doctorunknown.com"
 assert "Sitemap: https://doctorunknown.com/sitemap.xml" in (ROOT/"robots.txt").read_text()
 urls={n.text for n in ET.parse(ROOT/"sitemap.xml").findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")}
 assert urls=={"https://doctorunknown.com/"}
-print("PASS: both pages, local links, metadata, publishing files and countdown targets")
+assert "not a registered business entity" in texts["index.html"] and "belong to Andrew Jourdan" in texts["index.html"], "Keep the on-page legal notice (unregistered business, ownership)"
+print("PASS: page, local links, metadata, publishing files and legal notice")

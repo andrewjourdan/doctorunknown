@@ -77,6 +77,8 @@
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .domain span { background: #fff; padding: 4px 12px; border-radius: 999px; box-shadow: 0 0 14px 10px #fff; }
+  .domain .legal { display: block; width: fit-content; max-width: min(46rem, calc(100% - 32px)); margin: 10px auto 0; padding: 4px 12px; font-size: .74rem; line-height: 1.5; background: #fff; border-radius: 10px; box-shadow: 0 0 14px 10px #fff; }
+  main { padding-bottom: 120px; }
 
   /* The hexagon draws itself and stops with its open side and tail */
   .hex { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.9s cubic-bezier(.5,0,.2,1) .3s forwards; }
@@ -149,7 +151,7 @@
   <p class="contact">For communications in private relay<br><a href="mailto:unknown@doctorunknown.com">unknown@doctorunknown.com</a></p>
 </main>
 
-<div class="domain"><span>www.doctorunknown.com</span></div>
+<footer class="domain"><span>www.doctorunknown.com</span><small class="legal">Doctor Unknown&#8482; is a business in development, not a registered business entity, and offers no medical or professional services. The name, logo, domain and site content belong to Andrew Jourdan. &#169; 2026 Andrew Jourdan. All rights reserved.</small></footer>
 
 <script>
 /* Background: compounds from Alexander Shulgin's PiHKAL (phenethylamines) and TiHKAL (tryptamines),
